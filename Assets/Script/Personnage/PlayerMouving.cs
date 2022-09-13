@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMouving : MonoBehaviour
 {
     public float Speed = 0.01f;
-    public Vector2 turn;
+    public Vector3 Mouse;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,8 +27,12 @@ public class PlayerMouving : MonoBehaviour
         if (Input.GetKey(KeyCode.D)){
             transform.Translate(Vector3.right * Speed * Time.deltaTime);
         }
-        turn.x += Input.GetAxis("Mouse X");
-        turn.y += Input.GetAxis("Mouse Y");
-        transform.localRotation = Quaternion.Euler(0 , , 0);
+        //Mouse.x += Input.GetAxis("Mouse X");
+        //Mouse.z += Input.GetAxis("Mouse Y");
+
+        //transform.position = Vector3.Slerp(transform.position, Mouse, 0.0f);
+
+        // probleme : j'ai une position Vector3 et pas un quaternion et je ne sais pas comment 
+        // transform.localRotation = Quaternion.Slerp(Mouse, transform.rotation, 0.0f);
     }
 }

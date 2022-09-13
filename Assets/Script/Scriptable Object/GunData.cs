@@ -9,5 +9,4 @@ public class GunData : ScriptableObject
     public float damage;
     public float maxDistance;
     
-
 }
