@@ -135,12 +135,11 @@ GameObject:
   - component: {fileID: 88712387}
   - component: {fileID: 88712386}
   - component: {fileID: 88712385}
-  - component: {fileID: 88712388}
-  - component: {fileID: 88712389}
   - component: {fileID: 88712390}
+  - component: {fileID: 88712391}
   m_Layer: 0
   m_Name: Corps Personnage
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -226,7 +225,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 88712383}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &88712388
+--- !u!114 &88712390
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -238,9 +237,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b6220b3a4fca0641ac0477aaf395314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2
-  Mouse: {x: 0, y: 0, z: 0}
---- !u!195 &88712389
+  Speed: 4
+--- !u!195 &88712391
 NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -262,18 +260,6 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &88712390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88712383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53bdacbb21e178a4b9484189c5af2092, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &432564554
 GameObject:
   m_ObjectHideFlags: 0

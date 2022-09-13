@@ -5,6 +5,6 @@ using UnityEngine;
 public class Target : MonoBehaviour, IDamageable
 {
     public void Damage(){
-        Destroy(GameObject);
+        //Destroy(GameObject);
     }
 }

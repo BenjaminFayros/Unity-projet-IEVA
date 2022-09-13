@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerMouving : MonoBehaviour
 {
     public float Speed = 0.01f;
-    public Vector3 Mouse;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +12,7 @@ public class PlayerMouving : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixUpdate()
+    void Update()
     {
         if (Input.GetKey(KeyCode.Z)){
             transform.Translate(Vector3.forward * Speed * Time.deltaTime);
