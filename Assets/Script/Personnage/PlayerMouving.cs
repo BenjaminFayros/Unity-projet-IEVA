@@ -14,24 +14,20 @@ public class PlayerMouving : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Z)){
+        if (Input.GetKey(KeyCode.Q)){
             transform.Translate(Vector3.forward * Speed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.S)){
+        if (Input.GetKey(KeyCode.D)){
             transform.Translate(Vector3.back * Speed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.Q)){
+        if (Input.GetKey(KeyCode.S)){
             transform.Translate(Vector3.left * Speed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.D)){
+        if (Input.GetKey(KeyCode.Z)){
             transform.Translate(Vector3.right * Speed * Time.deltaTime);
         }
-        //Mouse.x += Input.GetAxis("Mouse X");
-        //Mouse.z += Input.GetAxis("Mouse Y");
+        float MouseX = Input.GetAxis("Mouse X") * 180.0f * Time.deltaTime ;
 
-        //transform.position = Vector3.Slerp(transform.position, Mouse, 0.0f);
-
-        // probleme : j'ai une position Vector3 et pas un quaternion et je ne sais pas comment 
-        // transform.localRotation = Quaternion.Slerp(Mouse, transform.rotation, 0.0f);
+        transform.Rotate(Vector3.up * MouseX);
     }
 }
