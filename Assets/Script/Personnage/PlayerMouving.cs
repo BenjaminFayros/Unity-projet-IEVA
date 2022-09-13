@@ -13,7 +13,7 @@ public class PlayerMouving : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixUpdate()
+    void Update()
     {
         if (Input.GetKey(KeyCode.Z)){
             transform.Translate(Vector3.forward * Speed * Time.deltaTime);
@@ -27,8 +27,6 @@ public class PlayerMouving : MonoBehaviour
         if (Input.GetKey(KeyCode.D)){
             transform.Translate(Vector3.right * Speed * Time.deltaTime);
         }
-        turn.x += Input.GetAxis("Mouse X");
-        turn.y += Input.GetAxis("Mouse Y");
-        transform.localRotation = Quaternion.Euler(0 , , 0);
+        
     }
 }
