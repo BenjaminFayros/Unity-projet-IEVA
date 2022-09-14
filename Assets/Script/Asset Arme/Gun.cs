@@ -10,6 +10,7 @@ public class Gun : MonoBehaviour
     [SerializeField] private Transform balle;
 
     float timeSinceLastShot;
+    IDamageable damageable;
 
     private void Start()
     {
@@ -21,8 +22,10 @@ public class Gun : MonoBehaviour
     public void Shoot()
     {
         if (CanShoot()){
-            if (Physics.Raycast(balle.position, balle.forward, out RaycastHit hitInfo, gunData.maxDistance)){
-                IDamageable damageable = hitInfo.transform.GetComponent<IDamageable>();
+            Debug.Log("KWA");
+            if (Physics.Raycast(balle.position, balle.up, out RaycastHit hitInfo, gunData.maxDistance)){
+                damageable = hitInfo.transform.GetComponent<IDamageable>();
+                Debug.Log(hitInfo.transform.name);
                 damageable.Damage(gunData.damage);
             }
             timeSinceLastShot = 0;
@@ -35,7 +38,7 @@ public class Gun : MonoBehaviour
     }
 
     private void OnGunShot(){
-        Debug.Log("KWA FEUR");
+        Debug.Log("FEUR");
     }
 
 }

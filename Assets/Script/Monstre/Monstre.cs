@@ -22,11 +22,6 @@ public class Monstre : MonoBehaviour
     {
         position = Joueur.transform.position;
         navMeshAgent.SetDestination(position);
-
-        //direction = position - transform.position;
-        //if (direction.magnitude < 2){
-        //    IDamageable damageable = Joueur.transform.GetComponent<IDamageable>();
-        //    damageable.Damage();
-        //}
     }
 }
+
