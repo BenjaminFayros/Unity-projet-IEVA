@@ -5,10 +5,21 @@ using UnityEngine;
 public class PlayerMouving : MonoBehaviour
 {
     public float Speed = 0.01f;
+    public bool allowCursorMove = true;
+
+    void CheckCursorLock()
+    {
+        if (Cursor.lockState == CursorLockMode.None)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+ 
+    }
     // Start is called before the first frame update
     void Start()
     {
-
+        CheckCursorLock();
     }
 
     // Update is called once per frame
