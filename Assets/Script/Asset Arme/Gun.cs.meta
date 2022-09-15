@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 53feb1af3f82ce54a833151ad19938ee
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - gunData: {fileID: 11400000, guid: 95bbdd6346fb5ba458aca0823034a18c, type: 2}
+  - balle: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
