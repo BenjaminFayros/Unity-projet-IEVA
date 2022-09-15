@@ -26,6 +26,7 @@ public class PlayerMouving : MonoBehaviour
         if (Input.GetKey(KeyCode.Z)){
             transform.Translate(Vector3.right * Speed * Time.deltaTime);
         }
+
         float MouseX = Input.GetAxis("Mouse X") * 180.0f * Time.deltaTime ;
 
         transform.Rotate(Vector3.up * MouseX);

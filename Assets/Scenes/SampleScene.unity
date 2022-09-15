@@ -240,7 +240,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 4
---- !u!195 &88712391
+  turn: {x: 0, y: 0}
+--- !u!195 &88712389
 NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
