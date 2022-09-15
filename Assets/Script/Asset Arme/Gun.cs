@@ -25,8 +25,11 @@ public class Gun : MonoBehaviour
             Debug.Log("KWA");
             if (Physics.Raycast(balle.position, balle.up, out RaycastHit hitInfo, gunData.maxDistance)){
                 damageable = hitInfo.transform.GetComponent<IDamageable>();
-                Debug.Log(hitInfo.transform.name);
-                damageable.Damage(gunData.damage);
+                if(hitInfo.transform.CompareTag("Ennemy"))
+                {
+                    Debug.Log(hitInfo.transform.name);
+                    damageable.Damage(gunData.damage);
+                } 
             }
             timeSinceLastShot = 0;
             OnGunShot();
