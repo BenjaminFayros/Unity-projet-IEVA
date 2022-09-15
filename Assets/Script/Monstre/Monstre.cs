@@ -11,6 +11,7 @@ public class Monstre : MonoBehaviour
     public GameObject Joueur;
     Vector3 position;
     private NavMeshAgent navMeshAgent;
+    Vector3 direction;
     void Start()
     {
         navMeshAgent = this.GetComponent<NavMeshAgent>();	
@@ -23,3 +24,4 @@ public class Monstre : MonoBehaviour
         navMeshAgent.SetDestination(position);
     }
 }
+
