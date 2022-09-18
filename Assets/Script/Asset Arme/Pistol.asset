@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Pistol
   damage: 30
-  maxDistance: 1000
+  maxDistance: 30
   fireRate: 240
